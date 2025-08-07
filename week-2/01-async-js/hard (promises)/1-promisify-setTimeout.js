@@ -3,6 +3,14 @@
 */
 
 function wait(n) {
+    return new Promise((resolve , reject)=>{
+        if(resolve){
+            setTimeout(()=>{
+                resolve('hello forum');
+                console.log('heyy!!')
+            },n);
+        }
+    })
 }
 
-module.exports = wait;
+module.exports = wait(3000);
